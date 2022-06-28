@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Категории техники компании {% endblock %}
+
+{% block content %}
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 product-grid">
+					<div class="col">
+						<div class="card">
+							<img src="{% static 'assets/images/products/01.png' %}" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h6 class="card-title cursor-pointer">Ноутбуки</h6>
+								<div class="clearfix">
+									<p class="mb-0 float-start"><strong>134</strong> шт</p>
+									<p class="mb-0 float-end ">Общая стоимость <span class="fw-bold">175 000 ₽</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col">
+						<div class="card">
+							<img src="{% static 'assets/images/products/01.png' %}" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h6 class="card-title cursor-pointer">Телефоны</h6>
+								<div class="clearfix">
+									<p class="mb-0 float-start"><strong>134</strong> шт</p>
+									<p class="mb-0 float-end ">Общая стоимость <span class="fw-bold">175 000 ₽</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col">
+						<div class="card">
+							<img src="{% static 'assets/images/products/01.png' %}" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h6 class="card-title cursor-pointer">Прочая техника</h6>
+								<div class="clearfix">
+									<p class="mb-0 float-start"><strong>134</strong> шт</p>
+									<p class="mb-0 float-end ">Общая стоимость <span class="fw-bold">175 000 ₽</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+{% endblock %}

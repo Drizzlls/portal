@@ -1,0 +1,77 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% block head %} {% include 'inc/_head.html' %} {% endblock %}
+	<title>{% block title %}Раздоров и компания{% endblock %}</title>
+</head>
+
+<body>
+<div class="wrapper">
+		<!--sidebar wrapper -->
+		<div class="sidebar-wrapper" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;"><div class="simplebar-content mm-active" style="padding: 0px;">
+			<div class="sidebar-header">
+				<div>
+					<img src="{% static 'assets/images/logo-icon.png' %}" class="logo-icon" alt="logo icon">
+				</div>
+				<div>
+					<h4 class="logo-text">Rukada</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class="bx bx-arrow-to-left"></i>
+				</div>
+			</div>
+
+			{% block menu %} {% include 'inc/_menu.html' %} {% endblock %}
+
+		</div></div>
+		</div></div><div class="simplebar-placeholder" style="width: auto; height: 1470px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 638px; transform: translate3d(0px, 0px, 0px); display: block;"></div></div></div>
+
+{% block header %}{% include 'inc/_header.html' %}{% endblock %}
+
+		<div class="page-wrapper">
+			<div class="page-content">
+				<!--breadcrumb-->
+				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+					<div class="breadcrumb-title pe-3">eCommerce</div>
+					<div class="ps-3">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 p-0">
+								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Orders</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="ms-auto">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary">Settings</button>
+							<button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">	<span class="visually-hidden">Toggle Dropdown</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end">	<a class="dropdown-item" href="javascript:;">Action</a>
+								<a class="dropdown-item" href="javascript:;">Another action</a>
+								<a class="dropdown-item" href="javascript:;">Something else here</a>
+								<div class="dropdown-divider"></div>	<a class="dropdown-item" href="javascript:;">Separated link</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end breadcrumb-->
+
+				{% block content %} {% endblock %}
+
+
+			</div>
+		</div>
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
+		<!--End Back To Top Button-->
+{% block footer %} {% include 'inc/_footer.html' %} {% endblock %}
+	</div>
+
+{% block scripts %} {% include 'inc/_scripts.html' %} {% endblock %}
+</body>
+</html>

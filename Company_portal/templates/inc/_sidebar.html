@@ -1,0 +1,16 @@
+{% load static %}
+<div class="sidebar-wrapper" data-simplebar="true">
+			<div class="sidebar-header">
+				<div>
+					<img src="{% static 'assets/images/logo-icon.png' %}" class="logo-icon" alt="logo icon">
+				</div>
+				<div>
+					<h4 class="logo-text">Razdorov &amp; co</h4>
+				</div>
+				<div class="toggle-icon ms-auto"><i class="bx bx-arrow-to-left"></i>
+				</div>
+			</div>
+			<!--navigation-->
+{% block head %} {% include 'inc/_menu.html' %} {% endblock %}
+			<!--end navigation-->
+		</div>
