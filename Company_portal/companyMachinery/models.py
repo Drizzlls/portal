@@ -1,4 +1,5 @@
 from django.db import models
+from employees.models import *
 # Create your models here.
 
 
@@ -33,6 +34,7 @@ class Products(models.Model):
     inventoryNumber = models.CharField(max_length=11, null=True, verbose_name="Инвентаризационный номер")
     brand = models.ForeignKey(MachineryBrandNotebook, on_delete=models.CASCADE,verbose_name="Бред")
     category = models.ForeignKey(CategoryList, on_delete=models.CASCADE, verbose_name="Категория")
+    responsible = models.ForeignKey(CompanyEmployees,on_delete=models.CASCADE, verbose_name="Категория",null=True)
 
     class Meta:
         verbose_name = "Технику"

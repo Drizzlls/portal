@@ -21,3 +21,8 @@ class MachineryCorp:
         else:
             form = AddItem()
         return render(request, "machinery/add.html",{"form":form})
+
+
+    def itemPage(request,idItem):
+        item = Products.objects.get(pk=idItem)
+        return render(request, "machinery/itemPage.html",{"item":item})

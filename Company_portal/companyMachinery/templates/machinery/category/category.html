@@ -27,7 +27,7 @@
 										<td>{{item.price}}</td>
 										<td>{{item.inventoryNumber}}</td>
 										<td>Ответственный</td>
-										<td><button type="button" class="btn btn-primary btn-sm radius-30 px-4">Подробнее</button></td>
+										<td><a type="button" class="btn btn-primary btn-sm radius-30 px-4" href="{% url 'itemPage' item.id %}">Подробнее</a></td>
 										<td>
 											<div class="d-flex order-actions">
 												<a href="javascript:;" class=""><i class="bx bxs-edit"></i></a>

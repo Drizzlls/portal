@@ -1,10 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Категории техники компании {% endblock %}
+
+{% block content %}
+
+<div class="card">
+					<div class="row g-0">
+					  <div class="col-md-4 border-end">
+						<img src="assets/images/products/13.png" class="img-fluid" alt="...">
+						<div class="row mb-3 row-cols-auto g-2 justify-content-center mt-3">
+							<div class="col"><img src="assets/images/products/12.png" width="70" class="border rounded cursor-pointer" alt=""></div>
+							<div class="col"><img src="assets/images/products/11.png" width="70" class="border rounded cursor-pointer" alt=""></div>
+							<div class="col"><img src="assets/images/products/14.png" width="70" class="border rounded cursor-pointer" alt=""></div>
+							<div class="col"><img src="assets/images/products/15.png" width="70" class="border rounded cursor-pointer" alt=""></div>
+						</div>
+					  </div>
+					  <div class="col-md-8">
+						<div class="card-body">
+						  <h4 class="card-title">{{item.title}}</h4>
+						  <p class="card-text fs-6">{{item.description}}</p>
+						  <dl class="row">
+							<dt class="col-sm-3">Цена</dt>
+							<dd class="col-sm-9">{{item.price}} ₽</dd>
+
+							<dt class="col-sm-3">Инвентаризационный номер</dt>
+							<dd class="col-sm-9">{{item.inventoryNumber}}</dd>
+
+							<dt class="col-sm-3">Бред</dt>
+							<dd class="col-sm-9">{{item.brand}}</dd>
+
+                            <dt class="col-sm-3">Категория</dt>
+							<dd class="col-sm-9">{{item.category}}</dd>
+
+                              <dt class="col-sm-3">Ответственный</dt>
+							<dd class="col-sm-9">{{item.responsible.name}} {{item.responsible.surname}}</dd>
+						  </dl>
+						  <hr>
+						<div class="d-flex gap-3 mt-3">
+							<a href="#" class="btn btn-primary">Редактировать</a>
+						</div>
+						</div>
+					  </div>
+					</div>
+                    <hr>
+
+{% endblock %}

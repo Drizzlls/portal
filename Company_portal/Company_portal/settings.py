@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'employees.apps.UsersPortalConfig',
-    'companyMachinery.apps.CompanymachineryConfig'
+    'companyMachinery.apps.CompanymachineryConfig',
+    'efficiencySite.apps.EfficiencysiteConfig'
 ]
 
 MIDDLEWARE = [
