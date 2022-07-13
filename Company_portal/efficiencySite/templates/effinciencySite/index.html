@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Категории техники компании {% endblock %}
+
+{% block content %}
+<div class="card">
+					<div class="card-body">
+						<div class="d-lg-flex align-items-center mb-4 gap-3">
+						  <div class="ms-auto"><a href="#" class="btn btn-primary radius-30 mt-2 mt-lg-0"><i class="bx bxs-plus-square"></i>Добавить</a></div>
+						</div>
+						<div class="table-responsive">
+							<table class="table mb-0">
+								<thead class="table-light">
+									<tr>
+										<th>Сайт</th>
+										<th>Ссылка</th>
+										<th>Статус</th>
+									</tr>
+								</thead>
+								<tbody>
+                                {% for item in data %}
+									<tr>
+                                        <td>{{item.title}}</td>
+
+                                        <td><a href="{{item.link}}" target="_blank">{{item.link}}</a></td>
+										                            {% if item.statusNow == "200" %}
+                                        <td><div class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"><i class="bx bxs-circle me-1"></i>Работает</div></td>
+                                        {% else %}
+										<td><div class="badge rounded-pill text-black-50 bg-light-danger p-2 text-uppercase px-3"><i class="bx bxs-circle me-1"></i>Не Работает</div></td>
+                                        {% endif %}
+									</tr>
+                                {% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+{% endblock %}
